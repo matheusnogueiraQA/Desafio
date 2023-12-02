@@ -1,55 +1,56 @@
 describe('Login', () => {
+    beforeEach(() => {
+        cy.visit('https://seubarriga.wcaquino.me/login')
+    })
 
-    beforeEach(() => cy.visit('https://seubarriga.wcaquino.me/login'))
-
-    it('Criar um novo usuário com sucesso', () => {
+    it('Crie um novo usuário com sucesso', () => {
         //Clica no botão 'Novo usuário?'
         cy.get('a')
-        .eq(2)
-        .click()
+            .eq(2)
+            .click()
 
         //Preenche os campos nome, email e senha
         cy.get('#nome')
-        .type(Cypress.env('nome'))
+            .type(Cypress.env('nome'))
         cy.get('#email')
-        .type(Cypress.env('email'))
+            .type(Cypress.env('email'))
         cy.get('#senha')
-        .type(Cypress.env('password'))
+            .type(Cypress.env('senha'))
 
         //Clica em Cadastrar
         cy.contains('Cadastrar')
-        .click()
+            .click()
 
         cy.get('.alert-success')
-        .should('exist')
+            .should('exist')
     })
 
-    it('Tentar realizar login com usuário sem cadastro', ()=> {
+    it('Tente realizar login com usuário sem cadastro', () => {
         //Preenche os campos email e senha inexistentes
         cy.get('#email')
-        .type(Cypress.env('emailfake'))
+            .type(Cypress.env('emailfake'))
         cy.get('#senha')
-        .type(Cypress.env('passwordfake'), { log: false })
+            .type(Cypress.env('senhafake'), { log: false })
 
         //Clica em Cadastrar
         cy.contains('Entrar').click()
 
         cy.get('.alert-danger')
-        .should('exist')
+            .should('exist')
     })
 
-    it('Realizar login com sucesso', ()=> {
+    it('Realize login com sucesso', () => {
         //Preenche os campos email e senha existentes
         cy.get('#email')
-        .type(Cypress.env('email'))
+            .type(Cypress.env('email'))
         cy.get('#senha')
-        .type(Cypress.env('password'), { log: false })
+            .type(Cypress.env('senha'), { log: false })
 
-        //Clica em Cadastrar
+        //Clica em Entrar
         cy.contains('Entrar')
-        .click()
+            .click()
 
         cy.get('.alert-success')
-        .should('exist')
+            .should('exist')
     })
 })

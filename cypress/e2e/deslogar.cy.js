@@ -4,12 +4,12 @@ describe('Deslogar', () => {
         cy.visit('https://seubarriga.wcaquino.me')
     })
 
-    it('Criar um novo usuário com sucesso', () => {
+    it('Deslogue', () => {
         //Clica em Sair
         cy.contains('Sair')
-        .click()
+            .click()
 
         cy.url()
-        .should('be.equal', 'https://seubarriga.wcaquino.me/logout')
+            .should('be.equal', 'https://seubarriga.wcaquino.me/logout')
     })
 })

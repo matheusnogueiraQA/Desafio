@@ -5,28 +5,28 @@ describe('Acesse Resumo Mensal', () => {
     })
 
     it('Filtre as movimentações criadas', () => {
-            //Clica em Resumo Mensal
-            cy.contains('Resumo Mensal')
-                .click()
+        //Clica em Resumo Mensal
+        cy.contains('Resumo Mensal')
+            .click()
 
-            //Clica em Mês e Fevereiro
-            cy.get('#mes').select('Fevereiro');
+        //Clica em Mês e Fevereiro
+        cy.get('#mes').select('Fevereiro');
 
-            //Clica em Ano e 2023
-            cy.get('#ano').select('2023');
+        //Clica em Ano e 2023
+        cy.get('#ano').select('2023');
 
-            //Clica em Cadastrar
-            cy.contains('Buscar')
-                .click()
+        //Clica em Buscar
+        cy.contains('Buscar')
+            .click()
 
-            cy.get('tbody tr')
-                .should('have.length', 7)
+        cy.get('tbody tr')
+            .should('have.length', 7)
     })
 
     it('Exclua uma movimentação', () => {
         //Clica em Resumo Mensal
         cy.contains('Resumo Mensal')
-        .click()
+            .click()
 
         //Clica em Mês e Fevereiro
         cy.get('#mes').select('Fevereiro');
@@ -37,17 +37,17 @@ describe('Acesse Resumo Mensal', () => {
         //Clica em Cadastrar
         cy.contains('Buscar')
 
-        .click()
+            .click()
         //Clica em Cadastrar
         cy.contains('Buscar')
             .click()
 
         //Clica em Excluir Movimentação
         cy.get('.glyphicon-remove-circle')
-        .eq(5)
-        .click()
+            .eq(5)
+            .click()
 
         cy.get('.alert-success')
-        .should('exist')
-})
+            .should('exist')
+    })
 })
