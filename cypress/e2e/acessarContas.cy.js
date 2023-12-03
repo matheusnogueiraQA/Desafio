@@ -1,89 +1,37 @@
 describe('Acessar Contas', () => {
+    let dataUsuario;
+    let dataConta
     beforeEach(() => {
-        cy.login()
-        cy.visit('https://seubarriga.wcaquino.me')
+        cy.fixture('usuario').then((tData) => {
+            dataUsuario = tData;
+        })
+        cy.fixture('conta').then((tData) => {
+            dataConta = tData;
+        })
+    })
+    //Login
+    beforeEach(() => {
+        cy.login(dataUsuario.email, dataUsuario.senha)
     })
 
     it('Adicione duas contas', () => {
-        //Clica em Adicionar Contas
-        cy.contains('Contas')
-            .click()
-        cy.contains('Adicionar')
-            .click()
-
-        // Cria uma conta Banco 1
-        cy.get('#nome')
-            .type(Cypress.env('conta1'))
-        cy.contains('Salvar')
-            .click()
-
+        cy.novaConta1(dataConta.conta1)
         cy.get('.alert-success')
             .should('exist')
-
-        //Clica em Adicionar Contas
-        cy.contains('Contas')
-            .click()
-        cy.contains('Adicionar')
-            .click()
-
-        // Cria uma conta Banco 2
-        cy.get('#nome')
-            .type(Cypress.env('conta2'))
-        cy.contains('Salvar')
-            .click()
-
+        cy.novaConta1(dataConta.conta2)
         cy.get('.alert-success')
             .should('exist')
     })
 
-    it('Liste todas as contas', () => {
-        //Clica em Listar Contas
-        cy.contains('Contas')
-            .click()
-        cy.contains('Listar')
-            .click()
-
+    it('Liste todas as contas', () => { 
+        cy.listarContas()
         cy.get('#tabelaContas')
             .should('exist')
     })
 
-    it('Altere o nome das contas', () => {
-        //Clica em Listar Contas
-        cy.contains('Contas')
-            .click()
-        cy.contains('Listar')
-            .click()
-
-        //Clica em Editar Conta 1
-        cy.get('.glyphicon-edit')
-            .eq(0)
-            .click()
-
-        //Apaga o campo Nome e preenche
-        cy.get('#nome')
-            .clear()
-            .type(Cypress.env('conta3'))
-
-        //Clica em Salvar
-        cy.contains('Salvar')
-            .click()
-
-        cy.get('.alert-success')
-            .should('exist')
-
-        //Clica em Editar Conta 2
-        cy.get('.glyphicon-edit')
-            .eq(1)
-            .click()
-
-        //Apaga o campo Nome e preenche
-        cy.get('#nome')
-            .clear()
-            .type(Cypress.env('conta4'))
-
-        //Clica em Salvar
-        cy.contains('Salvar')
-            .click()
+    it.o('Altere o nome das contas', () => {
+        cy.listarContas()
+        cy.editarContas(dataConta.conta3,dataConta.conta4)
 
         cy.get('.alert-success')
             .should('exist')
@@ -143,18 +91,7 @@ describe('Acessar Contas', () => {
     })
 
     it('Tente adicionar uma conta com o nome já existente', () => {
-        //Clica em Adicionar Contas
-        cy.contains('Contas')
-            .click()
-        cy.contains('Adicionar')
-            .click()
-
-        // Tenta criar uma conta Banco 4
-        cy.get('#nome')
-            .type(Cypress.env('conta4'))
-        cy.contains('Salvar')
-            .click()
-
+        cy.novaConta4(dataConta.conta4)
         cy.get('.alert-danger')
             .should('exist')
     })
