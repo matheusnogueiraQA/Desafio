@@ -7,8 +7,6 @@ describe('Login', () => {
     beforeEach(() => {
         cy.fixture('usuario').then((tData) => {
             data = tData;
-            cy.log(data.email)
-            cy.log(data.senha)
         })
     })
 

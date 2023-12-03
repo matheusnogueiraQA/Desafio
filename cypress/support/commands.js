@@ -4,11 +4,12 @@ Cypress.Commands.add('login', (email, senha) => {
     cy.get('#email')
         .type(email)
     cy.get('#senha')
-        .type(senha)
+        .type((senha), {log: false})
     //Clica em Entrar
     cy.contains('Entrar')
         .click()
 })
+
 Cypress.Commands.add('novoUsuario', (nome, email, senha) => {
     cy.visit('https://seubarriga.wcaquino.me/login')
     cy.contains('Novo usuário?')
@@ -25,6 +26,7 @@ Cypress.Commands.add('novoUsuario', (nome, email, senha) => {
     cy.contains('Cadastrar')
         .click()
 })
+
 Cypress.Commands.add('novaConta1', (conta1) => {
     cy.visit('https://seubarriga.wcaquino.me/')
     //Clica em Adicionar Contas
@@ -39,6 +41,7 @@ Cypress.Commands.add('novaConta1', (conta1) => {
     cy.contains('Salvar')
         .click()
 })
+
 Cypress.Commands.add('novaConta2', (conta2) => {
     cy.visit('https://seubarriga.wcaquino.me/')
     //Clica em Adicionar Contas
@@ -53,6 +56,7 @@ Cypress.Commands.add('novaConta2', (conta2) => {
     cy.contains('Salvar')
         .click()
 })
+
 Cypress.Commands.add('novaConta4', (conta4) => {
     cy.visit('https://seubarriga.wcaquino.me/')
     //Clica em Adicionar Contas
@@ -67,6 +71,7 @@ Cypress.Commands.add('novaConta4', (conta4) => {
     cy.contains('Salvar')
         .click()
 })
+
 Cypress.Commands.add('listarContas', () => {
     cy.visit('https://seubarriga.wcaquino.me/')
     // Clica em Listar Contas
@@ -75,6 +80,7 @@ Cypress.Commands.add('listarContas', () => {
     cy.contains('Listar')
         .click()
 })
+
 Cypress.Commands.add('editarContas', (conta3, conta4) => {
     //Clica em Editar Conta 1
     cy.get('.glyphicon-edit')
@@ -107,6 +113,7 @@ Cypress.Commands.add('editarContas', (conta3, conta4) => {
     cy.contains('Salvar')
         .click()
 })
+
 Cypress.Commands.add('novaMoviReceitaPago3', (dataTransacao1, dataPagamento1, descricao1, interessado1, valor1) => {
     cy.visit('https://seubarriga.wcaquino.me/')
 
@@ -131,6 +138,7 @@ Cypress.Commands.add('novaMoviReceitaPago3', (dataTransacao1, dataPagamento1, de
     cy.contains('Salvar')
         .click()
 })
+
 Cypress.Commands.add('novaMoviReceitaPago4', (dataTransacao1, dataPagamento1, descricao1, interessado1, valor1) => {
     cy.visit('https://seubarriga.wcaquino.me/')
 
@@ -155,6 +163,7 @@ Cypress.Commands.add('novaMoviReceitaPago4', (dataTransacao1, dataPagamento1, de
     cy.contains('Salvar')
         .click()
 })
+
 Cypress.Commands.add('novaMoviDespesaPendente3', (dataTransacao2, dataPagamento2, descricao2, interessado2, valor2) => {
     cy.visit('https://seubarriga.wcaquino.me/')
 
@@ -179,6 +188,7 @@ Cypress.Commands.add('novaMoviDespesaPendente3', (dataTransacao2, dataPagamento2
     cy.contains('Salvar')
         .click()
 })
+
 Cypress.Commands.add('novaMoviDespesaPendente4', (dataTransacao2, dataPagamento2, descricao2, interessado2, valor2) => {
     cy.visit('https://seubarriga.wcaquino.me/')
 

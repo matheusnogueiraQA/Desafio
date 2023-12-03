@@ -29,7 +29,7 @@ describe('Acessar Contas', () => {
             .should('exist')
     })
 
-    it.o('Altere o nome das contas', () => {
+    it('Altere o nome das contas', () => {
         cy.listarContas()
         cy.editarContas(dataConta.conta3,dataConta.conta4)
 
