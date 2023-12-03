@@ -1,7 +1,5 @@
 
 Cypress.Commands.add('novaMoviReceitaPago3', (dataTransacao1, dataPagamento1, descricao1, interessado1, valor1) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
-
     cy.contains('Criar Movimentação')
         .click()
     cy.get('#tipo')
@@ -25,8 +23,6 @@ Cypress.Commands.add('novaMoviReceitaPago3', (dataTransacao1, dataPagamento1, de
 })
 
 Cypress.Commands.add('novaMoviReceitaPago4', (dataTransacao1, dataPagamento1, descricao1, interessado1, valor1) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
-
     cy.contains('Criar Movimentação')
         .click()
     cy.get('#tipo')
@@ -50,8 +46,6 @@ Cypress.Commands.add('novaMoviReceitaPago4', (dataTransacao1, dataPagamento1, de
 })
 
 Cypress.Commands.add('novaMoviDespesaPendente3', (dataTransacao2, dataPagamento2, descricao2, interessado2, valor2) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
-
     cy.contains('Criar Movimentação')
         .click()
     cy.get('#tipo')
@@ -75,8 +69,6 @@ Cypress.Commands.add('novaMoviDespesaPendente3', (dataTransacao2, dataPagamento2
 })
 
 Cypress.Commands.add('novaMoviDespesaPendente4', (dataTransacao2, dataPagamento2, descricao2, interessado2, valor2) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
-
     cy.contains('Criar Movimentação')
         .click()
     cy.get('#tipo')
@@ -100,8 +92,6 @@ Cypress.Commands.add('novaMoviDespesaPendente4', (dataTransacao2, dataPagamento2
 })
 
 Cypress.Commands.add('novaMoviDataInvalida', (dataInvalida1, dataInvalida2, descricao1, interessado1, valor1) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
-
     cy.contains('Criar Movimentação')
         .click()
     cy.get('#tipo')
@@ -125,8 +115,6 @@ Cypress.Commands.add('novaMoviDataInvalida', (dataInvalida1, dataInvalida2, desc
 })
 
 Cypress.Commands.add('novaMoviValorInvalido', (dataTransacao1, dataPagamento1, descricao1, interessado1, valorInvalido) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
-
     cy.contains('Criar Movimentação')
         .click()
     cy.get('#tipo')

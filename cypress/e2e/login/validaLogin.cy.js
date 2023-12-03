@@ -6,7 +6,7 @@ describe('Login', () => {
 
     beforeEach(() => {
         cy.fixture('usuario').then((tData) => {
-            ddataUsuario = tData;
+            dataUsuario = tData;
         })
     })
 
