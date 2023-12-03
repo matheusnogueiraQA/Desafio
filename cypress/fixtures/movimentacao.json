@@ -1,0 +1,19 @@
+{
+  "dataTransacao1": "02/02/2023",
+  "dataTransacao2": "05/02/2023",
+  "dataTransacao3": "29/11/2023",
+  "dataTransacao4": "29/10/2023",
+  "dataPagamento1": "02/03/2023",
+  "dataPagamento2": "28/03/2023",
+  "descricao1": "Via pix",
+  "descricao2": "Via TED",
+  "interessado1": "Cliente",
+  "interessado2": "Interessado",
+  "valor1": "20",
+  "valor2": "10",
+  "dataInvalida1": "2023/10/20",
+  "dataInvalida2": "30/02/2023",
+  "dataInvalida3": "10/13/2023",
+  "dataInvalida4": "Data",
+  "valorInvalido": "Valor"
+}
