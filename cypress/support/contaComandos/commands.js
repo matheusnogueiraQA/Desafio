@@ -1,6 +1,5 @@
 
 Cypress.Commands.add('novaConta1', (conta1) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
     //Clica em Adicionar Contas
     cy.contains('Contas')
         .click()
@@ -15,7 +14,6 @@ Cypress.Commands.add('novaConta1', (conta1) => {
 })
 
 Cypress.Commands.add('novaConta2', (conta2) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
     //Clica em Adicionar Contas
     cy.contains('Contas')
         .click()
@@ -30,7 +28,6 @@ Cypress.Commands.add('novaConta2', (conta2) => {
 })
 
 Cypress.Commands.add('novaConta4', (conta4) => {
-    cy.visit('https://seubarriga.wcaquino.me/')
     //Clica em Adicionar Contas
     cy.contains('Contas')
         .click()
@@ -45,7 +42,6 @@ Cypress.Commands.add('novaConta4', (conta4) => {
 })
 
 Cypress.Commands.add('listarContas', () => {
-    cy.visit('https://seubarriga.wcaquino.me/')
     // Clica em Listar Contas
     cy.contains('Contas')
         .click()

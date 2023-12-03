@@ -2,11 +2,11 @@ import { faker } from '@faker-js/faker'
 const Faker = require('faker')
 
 describe('Login', () => {
-    let data;
+    let dataUsuario;
 
     beforeEach(() => {
         cy.fixture('usuario').then((tData) => {
-            data = tData;
+            ddataUsuario = tData;
         })
     })
 
@@ -26,7 +26,7 @@ describe('Login', () => {
     })
 
     it('Realize login com sucesso', () => {
-        cy.login(data.email, data.senha)
+        cy.login(dataUsuario.email, dataUsuario.senha)
 
         cy.get('.alert-success')
             .should('exist')
