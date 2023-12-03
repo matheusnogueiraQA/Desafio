@@ -1,3 +1,5 @@
 export default class authenticationPage{
-    static  
+    static cliqueAcessarAuthentication(){
+        
+    }
 }
