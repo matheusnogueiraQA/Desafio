@@ -5,7 +5,7 @@ Um desafio que busca compreender minha capacidade analítica e intuitiva na aná
 
 ## 📋 Pré-requisitos
 
-Node.js, para baixar [clique aqui.](https://choosealicense.com/licenses/mit/)
+Node.js, para baixar [clique aqui.](https://nodejs.org/en/)
 
 Cypress, para instalar [clique aqui.](https://docs.cypress.io/guides/getting-started/installing-cypress)
 
@@ -22,8 +22,27 @@ npm install
 
 ## ⚙️ Executando os testes
 
-Explicar como executar os testes automatizados para este sistema.
+### Com interface gráfica
 
+A aplicação gráfica do Cypress pode ser iniciada executando o comando abaixo no terminal:
+```
+npx cypress open
+```
+Atalho:
+```
+cy:open
+```
+
+### Sem interface gráfica
+
+Para executar os testes sem interface gráfica, execute o seguinte comando:
+```
+npx cypress run --config video=true --env allure=true
+```
+Atalho:
+```
+allure:run
+```
 
 ## 📦 Evidencias
 
@@ -44,8 +63,9 @@ Possui um vídeo (Report - Bolt.mp4) como evidência na pasta docs/bolt
 * [GIT](https://git-scm.com/) - Sistema de controle de versões.
 * [Node.js](https://nodejs.org/en/) - Software que permite a execução de códigos JavaScript fora de um navegador web.
 * [NPM](https://www.npmjs.com/) - Gerenciador de pacotes para o Node.JS
-* [cypress](https://www.cypress.io/) - Ferramenta de teste de front-end para aplicativos da web
+* [Cypress](https://www.cypress.io/) - Ferramenta de teste de front-end para aplicativos da web
 * [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker) - Biblioteca que possibilita a geração de uma grande quantidade de dados falsos nos browsers ou no back-end.
+* [Allure] (https://www.npmjs.com/package/allure-commandline)  -  Ferramenta que cria relatórios de execução de testes web.
 
 
 ## ✒️ Autores
