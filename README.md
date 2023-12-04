@@ -46,12 +46,12 @@ allure:run
 
 ## 📦 Evidencias
 
-Teste automatizado:
+### Teste automatizado:
 
 As evidencias estão na pasta docs/seuBarriga/videos.
 
 
-Teste manual:
+### Teste manual:
 
 As capturas de tela estão no arquivo docs/bolt/TESTE EXPLORATÓRIO - BOLT.
 
