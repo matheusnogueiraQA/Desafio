@@ -5,11 +5,11 @@ Um desafio que busca compreender minha capacidade analítica e intuitiva na aná
 
 ## 📋 Pré-requisitos
 
-Node.js, para baixar [clique aqui.](https://nodejs.org/en/)
+* Node.js, para baixar [clique aqui.](https://nodejs.org/en/)
 
-Cypress, para instalar [clique aqui.](https://docs.cypress.io/guides/getting-started/installing-cypress)
+* Cypress, para instalar [clique aqui.](https://docs.cypress.io/guides/getting-started/installing-cypress)
 
-IDE (Indico o VS Code), para baixar [clique aqui.](https://code.visualstudio.com)
+* IDE (Indico o VS Code), para baixar [clique aqui.](https://code.visualstudio.com)
 
 
 ## 🔧 Instalação
@@ -65,7 +65,7 @@ Possui um vídeo (Report - Bolt.mp4) como evidência na pasta docs/bolt
 * [NPM](https://www.npmjs.com/) - Gerenciador de pacotes para o Node.JS
 * [Cypress](https://www.cypress.io/) - Ferramenta de teste de front-end para aplicativos da web
 * [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker) - Biblioteca que possibilita a geração de uma grande quantidade de dados falsos nos browsers ou no back-end.
-* [Allure] (https://www.npmjs.com/package/allure-commandline)  -  Ferramenta que cria relatórios de execução de testes web.
+* [Allure](https://www.npmjs.com/package/allure-commandline)  -  Ferramenta que cria relatórios de execução de testes web.
 
 
 ## ✒️ Autores
