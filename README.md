@@ -5,16 +5,16 @@ Um desafio que busca compreender minha capacidade analítica e intuitiva na aná
 
 ## 📋 Pré-requisitos
 
+* IDE (Indico o VS Code), para baixar [clique aqui.](https://code.visualstudio.com)
+
 * Node.js, para baixar [clique aqui.](https://nodejs.org/en/)
 
 * Cypress, para instalar [clique aqui.](https://docs.cypress.io/guides/getting-started/installing-cypress)
 
-* IDE (Indico o VS Code), para baixar [clique aqui.](https://code.visualstudio.com)
-
 
 ## 🔧 Instalação
 
-Instale as dependências do projeto com o comando:
+No diretório do projeto, execute o seguinte comando para instalar as dependencias:
 ```
 npm install
 ```
