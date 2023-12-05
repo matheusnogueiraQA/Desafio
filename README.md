@@ -70,4 +70,4 @@ Possui um vídeo (Report - Bolt.mp4) como evidência na pasta docs/bolt
 
 ## ✒️ Autores
 
-Matheus Santiago Nogueira
+[Matheus Santiago Nogueira](https://github.com/matheusnogueiraQA)
