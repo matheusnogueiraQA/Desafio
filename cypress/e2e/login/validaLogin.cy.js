@@ -1,5 +1,4 @@
 import { faker } from '@faker-js/faker'
-const Faker = require('faker')
 
 describe('Login', () => {
     let dataUsuario;

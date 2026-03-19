@@ -25,7 +25,7 @@ describe('Acessar Contas', () => {
         cy.novaConta1(dataConta.conta1)
         cy.get('.alert-success')
             .should('exist')
-        cy.novaConta1(dataConta.conta2)
+        cy.novaConta2(dataConta.conta2)
         cy.get('.alert-success')
             .should('exist')
     })
