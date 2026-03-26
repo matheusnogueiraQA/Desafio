@@ -63,7 +63,7 @@ Possui um vídeo (Report - Bolt.mp4) como evidência na pasta docs/bolt
 * [GIT](https://git-scm.com/) - Sistema de controle de versões.
 * [Node.js](https://nodejs.org/en/) - Software que permite a execução de códigos JavaScript fora de um navegador web.
 * [NPM](https://www.npmjs.com/) - Gerenciador de pacotes para o Node.JS
-* [Cypress](https://www.cypress.io/) - Ferramenta de teste de front-end para aplicativos da web
+* [Cypress](https://www.cypress.io/) - Framework de automação de testes de ponta a ponta, focado em front-end para aplicativos da web
 * [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker) - Biblioteca que possibilita a geração de uma grande quantidade de dados falsos nos browsers ou no back-end.
 * [Allure](https://www.npmjs.com/package/allure-commandline)  -  Ferramenta que cria relatórios de execução de testes web.
 
